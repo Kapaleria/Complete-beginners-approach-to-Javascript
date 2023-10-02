@@ -5,14 +5,16 @@ const {getJournals, createJournal} = require('../controllers/Journal') //import 
 //Create, Read, Update, Delete
 // POST,GET, PATCH, DELETE
 
-router.get("/", (req,res)=>{
+//(file_path, function)
+
+router.get("/response", (req,res)=>{
     res.send('I am a response');
 })
 
 
 router.get("/getJournals", getJournals)
 
-//CREATE USIND THE POST METHOD
+//CREATE USING THE POST METHOD
 
 router.post("/createJournal", createJournal)
 

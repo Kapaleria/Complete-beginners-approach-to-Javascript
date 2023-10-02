@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require ('mongoose'); //connect to mongo db
+const cors = require ('cors')
 
 const router = require('./routes/routes') // we are importing the routers that we exported in routes.js
 
@@ -22,6 +23,7 @@ mongoose.connect(link,{
 
 
 //middleware
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(router)
